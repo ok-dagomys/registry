@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "registry"
+version = "0.1.0"
+description = ""
+authors = ["Divider <it-cio@mail.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "^1.4.4"
+openpyxl = "^3.0.10"
+XlsxWriter = "^3.0.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
