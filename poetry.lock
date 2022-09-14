@@ -1,4 +1,16 @@
 [[package]]
+name = "aioftp"
+version = "0.21.3"
+description = "ftp client/server for asyncio"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+socks = ["siosocks (>=0.2.0)"]
+tests = ["async-timeout", "pytest", "pytest-asyncio", "pytest-cov", "siosocks", "trustme"]
+
+[[package]]
 name = "comtypes"
 version = "1.1.14"
 description = "Pure Python COM package"
@@ -112,9 +124,13 @@ python-versions = ">=3.4"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "ef8b1418cca542d9fd58931a36a5229bbceab075691746434b00a87de2c96c5f"
+content-hash = "aa00a573ec52eb239eecc6ba72d9d63ebade018634550ae14a531bb5fe257c6a"
 
 [metadata.files]
+aioftp = [
+    {file = "aioftp-0.21.3-py3-none-any.whl", hash = "sha256:7c07ddc959e3ed30bdf5d5373da9d5ee9b7871e2d81835073132acd472b84b01"},
+    {file = "aioftp-0.21.3.tar.gz", hash = "sha256:c6dae50b3aa07f095b2d93a837d636dd93f235aaafe54adef82be0f8e5567fd2"},
+]
 comtypes = [
     {file = "comtypes-1.1.14-py2.py3-none-any.whl", hash = "sha256:7cdbe2dc65fe105eea97be04dc50ee3178747bcb64d802d7c0832416d75a87bd"},
     {file = "comtypes-1.1.14.zip", hash = "sha256:5d7caf6d3a86d51ddfc53e4548cae2dceee1b46672f8bd59679711dd01a934f2"},

@@ -52,13 +52,13 @@ def make_file_list(f_docx, c_date):
 def transfer_to_archive(f_docx):
     if not os.path.isdir(f'{arc}/{date.year}'):
         os.mkdir(f'{arc}/{date.year}')
-    os.replace(f'{src}/{f_docx}', f'{arc}/{date.year}/{date.strftime("%Y.%m.%d")} - {f_docx.split("+", 1)[-1].strip()}')
+    os.replace(f'{src}/{f_docx}', f'{arc}/{date.year}/{date.strftime("%Y.%m.%d")} - {f_docx.split("+", 5)[-1].strip()}')
 
 
 for file in os.listdir(src):
     created_time = os.path.getctime(f'{src}/{file}')
     modified_time = os.path.getmtime(f'{src}/{file}')
-    date = datetime.fromtimestamp(created_time)
+    date = datetime.fromtimestamp(modified_time)
 
     if file.lower().endswith('.doc') and '~' not in file:
         file = convert_to_docx(file, created_time, modified_time)
